@@ -1,8 +1,8 @@
 {
+	"proxy": "https://todo-task-server-01-todo-task-server-01.azuremicroservices.io",
 	"name": "todo_react_app",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://javascriptbear.github.io/todo_react_app",
 	"dependencies": {
 		"@mantine/core": "^4.2.12",
 		"@mantine/hooks": "^4.2.12",
