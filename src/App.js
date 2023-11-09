@@ -8,7 +8,6 @@ import {
   Group,
   Card,
   ActionIcon,
-  Code,
 } from "@mantine/core";
 import { useState, useRef, useEffect } from "react";
 import { MoonStars, Sun, Trash } from "tabler-icons-react";
@@ -16,9 +15,7 @@ import { MoonStars, Sun, Trash } from "tabler-icons-react";
 import {
   MantineProvider,
   ColorSchemeProvider,
-  ColorScheme,
 } from "@mantine/core";
-import { useColorScheme } from "@mantine/hooks";
 import { useHotkeys, useLocalStorage } from "@mantine/hooks";
 import axios from "axios";
 
@@ -26,7 +23,6 @@ export default function App() {
   const [tasks, setTasks] = useState([]);
   const [opened, setOpened] = useState(false);
 
-  const preferredColorScheme = useColorScheme();
   const [colorScheme, setColorScheme] = useLocalStorage({
     key: "mantine-color-scheme",
     defaultValue: "light",
@@ -188,6 +184,8 @@ export default function App() {
                       </Text>
                     </Card>
                   );
+                } else{
+                  return null;
                 }
               })
             ) : (
